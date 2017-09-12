@@ -36,9 +36,15 @@ public class BeeperBot extends Robot
         }
     }
     
+    public void faceSouth(){
+        while(!facingSouth()){
+            turnLeft();
+        }
+    }
+    
     public void findABeeperColumn(){
         faceNorth();
-        while(frontIsClear()){
+        while(!nextToABeeper()){
             faceEast();
             move();
             faceNorth();
@@ -46,13 +52,15 @@ public class BeeperBot extends Robot
     }
     
     public void collectColumn(){
-        while(!frontIsClear()){
-            move();
+        while(nextToABeeper()){
             pickBeeper();
+            move();
         }
+        returnFloor();
     }
     
     public void returnFloor(){
+        faceSouth();
         while(frontIsClear()){
             move();
         }
