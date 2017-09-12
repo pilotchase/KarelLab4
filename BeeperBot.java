@@ -42,6 +42,12 @@ public class BeeperBot extends Robot
         }
     }
     
+     public void faceWest(){
+        while(!facingWest()){
+            turnLeft();
+        }
+    }
+    
     public void findABeeperColumn(){
         faceNorth();
         while(!nextToABeeper()){
