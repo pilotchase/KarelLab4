@@ -44,7 +44,6 @@ public class Problem1 extends BeeperBot
                 move();
             }
         }
-        faceEast();
     }
     
     public void searchSouthWall(){
@@ -58,7 +57,6 @@ public class Problem1 extends BeeperBot
                 move();
             }
         }
-        faceNorth();
     }
     
     public void searchEastWall(){
@@ -72,7 +70,6 @@ public class Problem1 extends BeeperBot
                 move();
             }
         }
-        faceWest();
     }
     
     public void searchNorthWall(){
@@ -86,7 +83,6 @@ public class Problem1 extends BeeperBot
                 move();
             }
         }
-        faceSouth();
     }
    
 }
